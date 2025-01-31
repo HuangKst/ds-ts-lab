@@ -15,7 +15,7 @@ const friend1: Friend = {
   };
   
   export const friends: Friend[]= [friend1, friend2];
-  console.log(friends[1]);
+
   
   //   -------------------
 
@@ -50,5 +50,5 @@ const friend1: Friend = {
     former: [],
   };
   
-  console.log(colleagues.current[0]);
+
   
