@@ -80,11 +80,24 @@ console.log("Contact buddy at: ", findBuddyContact(myFootballBuddies, "Ralph Gra
 
 function getBuddyListFriends(list: BuddyList): Friend[] {
     return list.members.reduce((friends: Friend[], buddy) => {
-        if ((buddy as Friend).phone !== undefined) {  // 直接检查 relationship 字段
+        if ((buddy as Friend).phone !== undefined) {  
             friends.push(buddy as Friend);
         }
         return friends;
     }, []);
 }
 
+function getF(list:BuddyList):Friend[]{
+    const friends:Friend[]=[];
+    for(const buddy of list.members){
+        if((buddy as Friend).phone !== undefined){
+            friends.push(buddy as Friend);
+        }
+    }
+    return friends;
+}
+
 console.log(getBuddyListFriends(myBandBuddies));
+
+
+console.log(getF(myBandBuddies));
